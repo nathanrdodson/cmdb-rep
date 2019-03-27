@@ -1,0 +1,6 @@
+---
+ - hosts: localhost
+ - tasks:
+     - name: cmdb
+       shell: ansible -m setup --tree out/ all
+       shell: ansible-cmdb -C ~/custom_columns.conf $ADIR/out/ > /var/www/html/index.html
